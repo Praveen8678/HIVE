@@ -1,0 +1,29 @@
+Creating Managed Table:--
+**********************
+Synx:--
+hive> create table <tableName> <schema>
+    > row format delimited
+    > fileds terminated by '<del>'
+    > stored as textfile;
+Example:--
+
+hive> create table emp (eid int, ename string, esal int)
+    > row format delimited
+    > fields terminated by '|'
+    > stored as textfile;
+
+Creating External Table:--
+***********************
+
+hive> create external table <tableName> <schema>
+    > row format delimited
+    > fileds terminated by '<del>'
+    > stored as textfile
+    > location '<hdfsPath>';
+Example:--
+
+hive> create external table emp (eid int, ename string, esal int)
+    > row format delimited
+    > fields terminated by '|'
+    > stored as textfile
+    > location '/Praveen/HIVE/extTable';
