@@ -1,0 +1,18 @@
+Insert data into hive tables (managed and external):--
+*****************************************************
+
+We can insert data in two way into hive tables
+	1. from Local
+	2. from HDFS
+1. Loading data from Local path
+Synx:--
+hive> load data local inpath '<localFilePath>' into table <tableName>;
+Ex:--
+hive> load data local inpath 'empDetails.txt' into table emp;
+
+2. Loading data from HDFS path
+
+Synx:--
+hive> load data inpath '<hdfsFilePath>' into table <tableName>;
+Ex:--
+hive> load data inpath 'empDetails.txt' into table emp;
